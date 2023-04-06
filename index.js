@@ -65,7 +65,7 @@ async function handlers(event) {
   }, {
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env['openAI_Key']}`
+      "Authorization": `Bearer ${process.env['token']}`
     }
   }).then(res => {
     const success = res.data.choices[0].message.content
